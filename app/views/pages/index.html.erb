@@ -1,0 +1,27 @@
+
+<div class="container"> 
+    <h1 class="m-5">HOWARTS</h1>
+    <p class="m-5">El día de su cumpleaños, Harry Potter descubre que es hijo de dos conocidos hechiceros, de los que ha heredado poderes mágicos. Debe asistir a una famosa escuela de magia y hechicería, donde entabla una amistad con dos jóvenes que se convertirán en sus compañeros de aventura. Durante su primer año en Hogwarts, descubre que un malévolo y poderoso mago llamado Voldemort está en busca de una piedra filosofal que alarga la vida de quien la posee.</p>
+
+
+    <div class="table-responsive m-5">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Personaje</th>
+            <th>Locación</th>
+            <th>Casa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Character.all.each do |character| %>
+            <tr>
+            <td><%= character.name %></td>
+            <td><%= character.location %></td>
+            <td><%= character.house %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+    </div>
+</div>
